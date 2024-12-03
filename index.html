@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Move Zeros</title>
+    </head>
+<body>
+    <script>
+
+    function move_zeros(numbers) {
+    // Separate non-zero elements and count zeros
+    const nonZeros = numbers.filter(num => num !== 0); 
+    const zeroCount = numbers.length - nonZeros.length; 
+
+    // Append zeros to the end of non-zero elements
+    return nonZeros.concat(Array(zeroCount).fill(0));
+}
+
+
+const numbers = [0, 1, 0, 3, 15, 0, 5];
+console.log(move_zeros(numbers));
+
+
+
+
+
+
+    </script>
+</body>
+</html>
